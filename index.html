@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Roadmap Tracker</title>
+    <!-- Use Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        /* Custom styles for the drag-and-drop functionality */
+        .card:hover {
+            cursor: grab;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .card:active {
+            cursor: grabbing;
+        }
+        .drag-over {
+            background-color: #e5e7eb;
+            border-color: #6366f1;
+            border-style: dashed;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-2 tracking-tight">
+            Web Development Roadmap Tracker
+        </h1>
+        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            Drag and drop the cards below as you progress through your learning journey!
+        </p>
+
+        <!-- Kanban Board Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Column 1: To Learn -->
+            <div id="to-learn" class="column bg-gray-100 rounded-xl p-4 shadow-lg h-[80vh] overflow-y-auto drag-zone">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">To Learn</h2>
+                    <span class="bg-gray-200 text-gray-600 text-xs font-semibold rounded-full px-2 py-1">Concepts I haven't started yet</span>
+                </div>
+                <!-- HTML -->
+                <h3 class="font-semibold text-gray-700 mt-4 mb-2">HTML</h3>
+                <div id="card-html-1" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    HTML structure
+                </div>
+                <div id="card-html-2" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Headings, paragraphs, text formatting
+                </div>
+                <div id="card-html-3" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Links & navigation
+                </div>
+                <div id="card-html-4" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Images & multimedia
+                </div>
+                <div id="card-html-5" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Lists & tables
+                </div>
+                <div id="card-html-6" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Forms
+                </div>
+                <div id="card-html-7" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Semantic HTML
+                </div>
+                <div id="card-html-8" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Accessibility basics
+                </div>
+                
+                <!-- CSS -->
+                <h3 class="font-semibold text-gray-700 mt-4 mb-2">CSS</h3>
+                <div id="card-css-1" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Syntax & selectors
+                </div>
+                <div id="card-css-2" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Colors & gradients
+                </div>
+                <div id="card-css-3" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Typography
+                </div>
+                <div id="card-css-4" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Box model
+                </div>
+                <div id="card-css-5" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Units
+                </div>
+                <div id="card-css-6" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Display & positioning
+                </div>
+                <div id="card-css-7" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Flexbox
+                </div>
+                <div id="card-css-8" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Grid
+                </div>
+                <div id="card-css-9" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Responsive design
+                </div>
+                <div id="card-css-10" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Transitions & animations
+                </div>
+                <div id="card-css-11" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    CSS variables
+                </div>
+                <div id="card-css-12" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    CSS best practices
+                </div>
+
+                <!-- JavaScript -->
+                <h3 class="font-semibold text-gray-700 mt-4 mb-2">JavaScript</h3>
+                <div id="card-js-1" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Variables & data types
+                </div>
+                <div id="card-js-2" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Operators
+                </div>
+                <div id="card-js-3" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Functions, scope & closures
+                </div>
+                <div id="card-js-4" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Loops & conditionals
+                </div>
+                <div id="card-js-5" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Arrays
+                </div>
+                <div id="card-js-6" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Objects
+                </div>
+                <div id="card-js-7" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    DOM manipulation
+                </div>
+                <div id="card-js-8" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Events
+                </div>
+                <div id="card-js-9" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Forms & validation
+                </div>
+                <div id="card-js-10" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Fetch API & JSON
+                </div>
+                <div id="card-js-11" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    LocalStorage & SessionStorage
+                </div>
+                <div id="card-js-12" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    ES6+ features
+                </div>
+
+                <!-- React -->
+                <h3 class="font-semibold text-gray-700 mt-4 mb-2">React</h3>
+                <div id="card-react-1" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Setting up React
+                </div>
+                <div id="card-react-2" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    JSX & components
+                </div>
+                <div id="card-react-3" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Props & state (useState)
+                </div>
+                <div id="card-react-4" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Event handling
+                </div>
+                <div id="card-react-5" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Conditional rendering & lists
+                </div>
+                <div id="card-react-6" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    useEffect hook
+                </div>
+                <div id="card-react-7" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Forms & controlled components
+                </div>
+                <div id="card-react-8" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Component lifecycle basics
+                </div>
+                <div id="card-react-9" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    React Router & Context API
+                </div>
+                <div id="card-react-10" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Deploy React app
+                </div>
+
+                <!-- Other Essentials -->
+                <h3 class="font-semibold text-gray-700 mt-4 mb-2">Other Essentials</h3>
+                <div id="card-other-1" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Git & GitHub workflow
+                </div>
+                <div id="card-other-2" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Hosting static websites
+                </div>
+                <div id="card-other-3" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Chrome DevTools & debugging
+                </div>
+                <div id="card-other-4" class="card bg-white rounded-lg p-3 shadow-md mb-3 border border-gray-200" draggable="true">
+                    Freelance-ready basics
+                </div>
+            </div>
+            
+            <!-- Column 2: Learning -->
+            <div id="learning" class="column bg-yellow-100 rounded-xl p-4 shadow-lg h-[80vh] overflow-y-auto drag-zone">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-yellow-800">Learning</h2>
+                    <span class="bg-yellow-200 text-yellow-700 text-xs font-semibold rounded-full px-2 py-1">Concepts I'm currently studying</span>
+                </div>
+            </div>
+            
+            <!-- Column 3: Practicing -->
+            <div id="practicing" class="column bg-blue-100 rounded-xl p-4 shadow-lg h-[80vh] overflow-y-auto drag-zone">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-blue-800">Practicing</h2>
+                    <span class="bg-blue-200 text-blue-700 text-xs font-semibold rounded-full px-2 py-1">Concepts I'm applying in projects</span>
+                </div>
+            </div>
+
+            <!-- Column 4: Mastered -->
+            <div id="mastered" class="column bg-green-100 rounded-xl p-4 shadow-lg h-[80vh] overflow-y-auto drag-zone">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-green-800">Mastered</h2>
+                    <span class="bg-green-200 text-green-700 text-xs font-semibold rounded-full px-2 py-1">Concepts I feel confident with</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get all draggable cards and drag zones (columns)
+        const cards = document.querySelectorAll('.card');
+        const dragZones = document.querySelectorAll('.drag-zone');
+
+        let draggedCard = null;
+
+        // Add event listeners for each card
+        cards.forEach(card => {
+            card.addEventListener('dragstart', (event) => {
+                // Store a reference to the dragged card and its ID
+                draggedCard = event.target;
+                event.dataTransfer.setData('text/plain', draggedCard.id);
+            });
+        });
+
+        // Add event listeners for each drag zone (column)
+        dragZones.forEach(zone => {
+            zone.addEventListener('dragover', (event) => {
+                // Prevent default behavior to allow dropping
+                event.preventDefault();
+                // Add a visual indicator to the dropzone
+                zone.classList.add('drag-over');
+            });
+
+            zone.addEventListener('dragleave', (event) => {
+                // Remove the visual indicator when the card leaves the zone
+                zone.classList.remove('drag-over');
+            });
+
+            zone.addEventListener('drop', (event) => {
+                // Prevent default behavior (e.g., opening the card as a link)
+                event.preventDefault();
+                
+                // Get the ID of the dragged card from the data transfer object
+                const cardId = event.dataTransfer.getData('text/plain');
+                const card = document.getElementById(cardId);
+                
+                // Append the card to the target dropzone
+                // `event.currentTarget` refers to the element the event listener is attached to (the column)
+                event.currentTarget.appendChild(card);
+                
+                // Remove the visual indicator
+                event.currentTarget.classList.remove('drag-over');
+
+                // Call the function to save the state to local storage after a drop
+                saveBoardState();
+            });
+        });
+
+        /**
+         * Saves the current state of the Kanban board to local storage.
+         * The state is stored as a JSON object where keys are column IDs and values are arrays of card IDs.
+         */
+        function saveBoardState() {
+            const boardState = {};
+            // Iterate over each column
+            dragZones.forEach(zone => {
+                const columnId = zone.id;
+                const cardIds = [];
+                // Get all card IDs within the current column
+                zone.querySelectorAll('.card').forEach(card => {
+                    cardIds.push(card.id);
+                });
+                // Store the card IDs in the boardState object
+                boardState[columnId] = cardIds;
+            });
+            // Save the stringified JSON object to local storage
+            localStorage.setItem('kanbanBoardState', JSON.stringify(boardState));
+        }
+
+        /**
+         * Loads the saved state from local storage and restores the Kanban board.
+         * This function is called on page load.
+         */
+        function loadBoardState() {
+            const savedState = localStorage.getItem('kanbanBoardState');
+            // If a saved state exists, parse it and restore the board
+            if (savedState) {
+                const boardState = JSON.parse(savedState);
+                // Iterate over the columns from the saved state
+                for (const columnId in boardState) {
+                    if (boardState.hasOwnProperty(columnId)) {
+                        const cardIds = boardState[columnId];
+                        const targetColumn = document.getElementById(columnId);
+                        // Iterate over the card IDs and move each card to its saved column
+                        cardIds.forEach(cardId => {
+                            const card = document.getElementById(cardId);
+                            if (card) {
+                                targetColumn.appendChild(card);
+                            }
+                        });
+                    }
+                }
+            }
+        }
+        
+        // Load the saved board state as soon as the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', loadBoardState);
+    </script>
+</body>
+</html>
